@@ -3,14 +3,16 @@
     <% ideas.each do |idea| %>
       <div class="item">
         <div class="col-md-3 col-sm-4 col-xs-12">
-          <div class="panel panel-default linkbox">
-            <%= link_to '', idea %>
-            <div class="panel-body">
-              <p class="item-title"><%= idea.content %></p>
+          <div class="panel panel-default">
+            <div class="panel-body linkbox">
+              <%= link_to '', idea %>
+              <p class="item-title"><%= simple_format h idea.content %></p>
             </div>
-            <div class="buttons text-center" role="group">
+            <% if logged_in? %>
+            <div class=" panel-footer buttons text-center" role="group">
               <%= render 'favorites/fav_button', idea: idea %>
             </div>
+            <% end %>
           </div>
 
         </div>

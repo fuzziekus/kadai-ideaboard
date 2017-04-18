@@ -1,4 +1,4 @@
-<h1>Wantランキング</h1>
+<h1>Favランキング</h1>
 <% if @ideas.present? %>
   <div class="row">
     <% @ideas.each_with_index do |idea, index| %>
@@ -8,7 +8,6 @@
 	          <%= link_to '', idea %>
             <div class="panel-body">
               <p class="item-title"><%= idea.content %></p>
-              </div>
             </div>
             <div class="panel-footer">
               <p class="text-center"><%= index+1 %>位: <%= @ranking_counts[idea.id] %> Favs</p>
@@ -23,4 +22,5 @@
       </div>
     <% end %>
   </div>
+</div>
 <% end %>
