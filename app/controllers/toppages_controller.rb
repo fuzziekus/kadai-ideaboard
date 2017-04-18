@@ -6,7 +6,8 @@ class ToppagesController < ApplicationController
       @idea  = current_user.ideas.build  # form_for 用
     end
 
-    @ideas = Idea.order('created_at DESC').page(params[:page])
+    @ideas = @search_ideas.order('created_at DESC').page(params[:page])
+    # Idea.order('created_at DESC').page(params[:page])
 
   end
 end

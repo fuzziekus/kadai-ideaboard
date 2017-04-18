@@ -18,7 +18,6 @@ class ApplicationController < ActionController::Base
   
   def set_search
     @search = Idea.ransack(params[:q])
-    puts @search
-    @search_ideas = @search.result.page(params[:page])
+    @search_ideas = @search.result #.page(params[:page])
   end
 end
