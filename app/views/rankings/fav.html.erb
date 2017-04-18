@@ -4,9 +4,9 @@
     <% @ideas.each_with_index do |idea, index| %>
       <div class="item">
         <div class="col-md-3 col-sm-4 col-xs-12">
-          <div class="panel panel-default linkbox">
-	          <%= link_to '', idea %>
-            <div class="panel-body">
+          <div class="panel panel-default">
+            <div class="panel-body linkbox">
+              <%= link_to '', idea %>
               <p class="item-title"><%= idea.content %></p>
             </div>
             <div class="panel-footer">

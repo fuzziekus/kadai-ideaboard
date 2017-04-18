@@ -1,1 +1,5 @@
-<%= render 'ideas/ideas', ideas: @favs, user: @user %>
+<% if @favs %>
+    <%= render 'ideas/ideas', ideas: @favs, user: @user %>
+<% else %>
+    <h5>Fav数は0です. ぜひFavしてみましょう！</h5>
+<% end %>
