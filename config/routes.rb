@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new'
   resources :users, only: [:show, :new, :create]
+  resources :ideas
+  resources :favorites, only: [:index, :create, :destroy]
+  
+  get 'rankings/fav', to: 'rankings#fav'
 end

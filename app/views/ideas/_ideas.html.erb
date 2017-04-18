@@ -1,0 +1,22 @@
+<% if ideas %>
+  <div class="row">
+    <% ideas.each do |idea| %>
+      <div class="item">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="panel panel-default linkbox">
+            <%= link_to '', idea %>
+            <div class="panel-body">
+              <p class="item-title"><%= idea.content %></p>
+            </div>
+            <div class="buttons text-center" role="group">
+              <%= render 'favorites/fav_button', idea: idea %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+  <%= paginate ideas %>
+<% end %>

@@ -1,0 +1,10 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading"><h4>アイデア #<%= @idea.id %> 詳細</h4></div>
+  <div class="panel-body">
+    <%= @idea.content %>
+  </div>
+</div>
+
+<%= link_to 'このアイデアを編集する', edit_idea_path(@idea), class: 'btn btn-default' %>
+<%= link_to 'このアイデアを削除する', @idea, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
