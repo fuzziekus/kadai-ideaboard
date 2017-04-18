@@ -6,5 +6,7 @@
   </div>
 </div>
 
+<% if @flag %>
 <%= link_to 'このアイデアを編集する', edit_idea_path(@idea), class: 'btn btn-default' %>
 <%= link_to 'このアイデアを削除する', @idea, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
+<% end %>

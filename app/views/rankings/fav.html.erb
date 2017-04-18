@@ -7,7 +7,7 @@
           <div class="panel panel-default">
             <div class="panel-body linkbox">
               <%= link_to '', idea %>
-              <p class="item-title"><%= idea.content %></p>
+              <p class="item-title"><%= simple_format h idea.content %></p>
             </div>
             <div class="panel-footer">
               <p class="text-center"><%= index+1 %>位: <%= @ranking_counts[idea.id] %> Favs</p>

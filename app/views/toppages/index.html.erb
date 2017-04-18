@@ -11,14 +11,14 @@
   </div>
 <% end %>
 
-<% if logged_in? %> 
+
   <%= form_for(@idea) do |f| %>
     <div class="form-group">
       <%= f.text_area :content, class: 'form-control', rows: 5 %>
     </div>
     <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
   <% end %>
-<% end %>
+
 <br>
 
 <%= render 'ideas/ideas', ideas: @ideas %>

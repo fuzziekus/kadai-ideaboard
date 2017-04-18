@@ -1,10 +1,15 @@
 class IdeasController < ApplicationController
   before_action :require_user_logged_in
-  before_action :correct_user, only: [:update, :destroy, :edit, :show]
+  before_action :correct_user, only: [:update, :destroy, :edit]
   
   def show
+    @flag = false
+    if current_user.ideas.find_by(id: params[:id])
+      @flag = true
+    end
+    @idea = Idea.find_by(id: params[:id])
   end
-
+  
   def edit
   end
   
@@ -21,7 +26,7 @@ class IdeasController < ApplicationController
   def create
     @idea = current_user.ideas.build(idea_params)
     if @idea.save
-      flash[:success] = 'メッセージを投稿しました。'
+      flash[:success] = '素敵なアイデアをありがとう！'
       redirect_to root_url
     else
       @ideas = current_user.ideas.order('created_at DESC').page(params[:page])
