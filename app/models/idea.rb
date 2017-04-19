@@ -6,4 +6,7 @@ class Idea < ApplicationRecord
   
   has_many :favorites
   has_many :users, through: :favorites
+  has_many :comments
+  has_many :comment_users, through: :comments
+  
 end

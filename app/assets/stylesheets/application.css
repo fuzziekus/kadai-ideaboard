@@ -88,24 +88,6 @@ footer {
 }
 
 
-.linkbox a{
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  height:100%;
-  width: 80%;
-  /*border:2px solid #00171F;*/
-}
-
- /* 以下マウスを載せたときのスタイル */
-.linkbox a:hover{
-  color: #222;
-  text-decoration: none;
-  opacity: 0.25;  /* 要素を透明にするタグ */
-  background-color: #E6EBE0;
-}
-
 .fav {
     float: right;
     position: relative;
@@ -113,12 +95,32 @@ footer {
     right: 1px
 }
 .postit {
-  padding: 10px; 
+  padding: 0px 0px 10px 10px; 
 }
 
 .postit span {
     display:block;
     border-bottom:1px dotted #908a60;
+}
+
+.postit2 {
+  position: relative;
+  width: 100%; height: auto;
+}
+
+.postit2 a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.postit2 a:hover {
+  text-decoration: none;
+  background-color:#FFF;
+  filter:alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
 }
 
 .container {
