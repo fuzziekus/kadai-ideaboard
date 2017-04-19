@@ -3,18 +3,8 @@
     <% ideas.each do |idea| %>
       <div class="item">
         <div class="col-md-3 col-sm-4 col-xs-12">
-          <div class="panel panel-default">
-            <div class="panel-body linkbox">
-              <%= link_to '', idea %>
-              <p class="item-title"><%= simple_format h idea.content %></p>
-            </div>
-            <% if logged_in? %>
-            <div class=" panel-footer buttons text-center" role="group">
-              <%= render 'favorites/fav_button', idea: idea %>
-            </div>
-            <% end %>
-          </div>
-
+           <!--%w( #00FFFF #ADFF2F ).sample-->
+            <%= render 'ideas/idea', idea: idea, color: %w( #AFEEEE #EEE8AA #00FFFF #ADFF2F ).sample %>
         </div>
       </div>
 

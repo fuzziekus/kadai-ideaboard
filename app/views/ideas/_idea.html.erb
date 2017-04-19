@@ -1,0 +1,10 @@
+<div class="linkbox" style="background-color:<%=color%>">
+    <% if logged_in? %>
+        <%= render 'favorites/fav_button', idea: idea %>
+    <% end %>
+    <%= link_to '', idea %>
+    <p class="postit">
+        <span><%= simple_format h idea.content %></span>
+    </p>
+
+</div>
