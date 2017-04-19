@@ -9,10 +9,9 @@ class IdeasController < ApplicationController
     end
     @idea = Idea.find_by(id: params[:id])
     @comments = @idea.comments
-    @comment = @comments.build
+    @comment  = @comments.build
     @comment.user_id = current_user.id
-    @comment.idea_id = params[:id]
-    puts @comment
+    @comment.idea_id = @idea.id
   end
   
   def edit

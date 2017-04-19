@@ -1,5 +1,5 @@
 
-  <div class="linkbox">
+  <div class="linkbox"  style="background-color:<%= %w( #AFEEEE #EEE8AA #00FFFF #ADFF2F ).sample %>" >
     <%= simple_format h @idea.content %>
   </div>
 
@@ -12,9 +12,9 @@
 <br>
 
 <% if logged_in? %>
-    <%= form_for(@comment) do |f| %>
-      <div class="pull-right form-group">
-        <%= f.text_field   :content, :placeholder => "コメント(最大255文字)" %>
+    <%= form_for(@comment, :html => {:class => "form-inline pull-right "})  do |f| %>
+      <div class="form-group">
+        <%= f.text_field   :content, :placeholder => "コメント(最大255文字)", class: 'form-control' %>
         <%= f.hidden_field :user_id %>
         <%= f.hidden_field :idea_id %>
         <%= f.submit '投稿', class: 'btn btn-primary' %>
@@ -29,9 +29,11 @@
 <% else %>
 <div class="row">
     <% @comments.each do |comment| %>
+      <% if comment.content.blank? %>
+      <% else %>
       <div class="item">
         <div class="col-md-3 col-sm-4 col-xs-12">
-          <div class="linkbox">
+          <div class="linkbox" style="background-color:<%= %w( #AFEEEE #EEE8AA #00FFFF #ADFF2F ).sample %>">
             <p class="postit">
               <% user = User.find_by(id: comment.user_id) %>
               <span>User : <%= link_to user.name, user %> <br><%= comment.updated_at %> </span>
@@ -42,6 +44,7 @@
           </div>
         </div>
       </div>
+      <% end %>
     <% end %>
   </div>
 <% end %>
