@@ -48,7 +48,7 @@ class IdeasController < ApplicationController
   private
 
   def idea_params
-    params.require(:idea).permit(:content)
+    params.require(:idea).permit(:content, :image)
   end
   
   def correct_user
