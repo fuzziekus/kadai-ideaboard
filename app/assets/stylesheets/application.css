@@ -167,6 +167,32 @@ label {
     -webkit-transition: all .5s ease;
 }
 
+.tape{
+  /* tape design */
+  --jaggySize: 3px;
+  --jaggyColor: rgba(255,255,255,.8);
+  --tapeColor: rgba(255,255,255,.8);
+
+  width: 70px; height: 20px;
+  min-width: 60px;
+  padding: 0 calc(var(--jaggySize) * 2);
+
+  background:
+    linear-gradient(+30deg, transparent 50%, var(--jaggyColor) 50%)
+      left center / var(--jaggySize) var(--jaggySize) repeat-y,
+
+    linear-gradient(-30deg, transparent 50%, var(--jaggyColor) 50%) 
+      right center /  var(--jaggySize) var(--jaggySize) repeat-y,
+
+    linear-gradient(to left, 
+      transparent var(--jaggySize), var(--tapeColor) var(--jaggySize), 
+      var(--tapeColor) calc(100% - var(--jaggySize)), transparent calc(100% - var(--jaggySize)));
+
+  /* 位置・角度 */
+  position: absolute;
+  top: -8px; left: 40%;
+}
+
 .container {
   font-family: "HuiFont29",Verdana,sans-serif;
   /*background: #f2f2f2;*/
