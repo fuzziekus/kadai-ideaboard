@@ -9,7 +9,7 @@
         <div class="postit2">
             <% unless idea.image.blank? %>
                 <div class="thumbnail" style="background-color:<%=color%>">
-                    <%= link_to image_tag(idea.image, options = { :border => '0', :padding => '0px',:margin => '0px' }), idea %>
+                    <%= link_to image_tag(idea.image), idea %>
                 </div>
             <% end %>
             <%= link_to simple_format( h(idea.content)), idea %>
