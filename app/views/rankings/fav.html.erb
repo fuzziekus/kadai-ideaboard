@@ -6,7 +6,7 @@
         <div class="col-md-3 col-sm-4 col-xs-12">
           <div class="linkbox">
           <%= render 'ideas/idea', idea: idea, color: %w( #AFEEEE #EEE8AA #00FFFF #ADFF2F ).sample %>
-              <p class="text-center"><%= index+1 %>位: <%= @ranking_counts[idea.id] %> Favs</p>
+              <p class="text-center" style="color:#fff"><%= index+1 %>位: <%= @ranking_counts[idea.id] %> Favs</p>
           </div>
         </div>
       </div>

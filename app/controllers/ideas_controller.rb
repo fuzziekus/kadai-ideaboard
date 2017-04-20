@@ -33,7 +33,7 @@ class IdeasController < ApplicationController
       flash[:success] = '素敵なアイデアをありがとう！'
       redirect_to root_url
     else
-      @ideas = current_user.ideas.order('created_at DESC').page(params[:page])
+      @ideas = Idea.order('created_at DESC').page(params[:page])
       flash.now[:danger] = 'メッセージの投稿に失敗しました。'
       render 'toppages/index'
     end
