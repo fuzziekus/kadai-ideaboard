@@ -9,7 +9,7 @@ class IdeasController < ApplicationController
     end
     @idea = Idea.find_by(id: params[:id])
     @comments = @idea.comments
-    @comment  = @comments.build
+    @comment  = Idea.find_by(id: params[:id]).comments.new
     @comment.user_id = current_user.id
     @comment.idea_id = @idea.id
   end
