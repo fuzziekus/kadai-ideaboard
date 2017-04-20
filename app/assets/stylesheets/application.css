@@ -74,19 +74,25 @@ footer {
 
 .linkbox {
   position: relative;
-  width: 100%; height: auto; 
-  /*-webkit-transform: rotate(4deg);*/
-  /*-moz-transform: rotate(4deg);*/
-  /*-o-transform: rotate(4deg);*/
-  background-color:#faf7e0;
+  width: 100%; height: auto;
   color:#000;
-  -moz-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.25);
   box-sizing:border-box;
   font-size:15px;
+  -webkit-box-sizing: border-box;
+    border-bottom-right-radius: 60px 5px;
+    -webkit-box-shadow: inset -20px -20px 5px -20px rgba(0, 0, 0, .1);
 }
-
+.linkbox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
 
 .fav {
     float: right;
@@ -109,22 +115,56 @@ footer {
 }
 
 .postit2 a {
-  padding: 10px;
+  padding: 30px;
   display: block;
   text-decoration: none;
   color: #000;
 }
 
-.postit2 a:hover {
-  text-decoration: none;
-  background-color:#FFF;
-  filter:alpha(opacity=50);
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-}
 
 label {
   color: black;
+}
+
+@-webkit-keyframes flapInTheWind {
+    0% {
+	border-bottom-right-radius: 60px 5px;
+	-webkit-box-shadow: inset -20px -20px 5px -20px rgba(0, 0, 0, .1);
+    }
+    20% {
+	border-bottom-right-radius: 80px 20px;
+	-webkit-box-shadow: inset -20px -20px 10px -20px rgba(0, 0, 0, .1);
+    }
+    60% {
+	border-bottom-right-radius: 60px 5px;
+	-webkit-box-shadow: inset -20px -20px 5px -20px rgba(0, 0, 0, .1);
+    }
+    100% {
+	border-bottom-right-radius: 160px 30px;
+	-webkit-box-shadow: inset -20px -20px 15px -20px rgba(0, 0, 0, .1);
+    }
+}
+.flapInTheWind {
+    -webkit-animation-name: flapInTheWind;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+}
+.flapInTheWind:hover {
+    -webkit-animation: 0;
+}
+
+/* intractive motion */
+.flip:hover {
+    border-bottom-right-radius: 180px 30px;
+    -webkit-box-shadow: inset -20px -20px 20px -20px rgba(0, 0, 0, .1);
+}
+.flipMore:hover {
+    border-bottom-right-radius: 300px 60px;
+    -webkit-box-shadow: inset -20px -20px 60px -20px rgba(0, 0, 0, .1);
+}
+.flipAnimation {
+    -webkit-transition: all .5s ease;
 }
 
 .container {
