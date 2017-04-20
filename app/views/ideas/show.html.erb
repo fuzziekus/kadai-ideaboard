@@ -17,18 +17,19 @@
         </div>
       </p>
     </div>
+    
+    <% if @flag %>
+      <%= link_to 'このアイデアを編集する', edit_idea_path(@idea), class: 'btn btn-default' %>
+      <%= link_to 'このアイデアを削除する', @idea, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
+    <% end %>
+
   </div>
 </div>
-
-<% if @flag %>
-  <%= link_to 'このアイデアを編集する', edit_idea_path(@idea), class: 'btn btn-default' %>
-  <%= link_to 'このアイデアを削除する', @idea, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
-<% end %>
 
 <br>
 
 <% if logged_in? %>
-    <%= form_for(@comment, :html => {:class => "form-inline pull-right "})  do |f| %>
+    <%= form_for(@comment, :html => {:class => "form-inline pull-right"})  do |f| %>
       <div class="form-group">
         <%= f.text_field   :content, :placeholder => "コメント(最大255文字)", class: 'form-control' %>
         <%= f.hidden_field :user_id %>
@@ -49,10 +50,11 @@
         <div class="col-md-3 col-sm-4 col-xs-12">
           <div class="linkbox flip flipAnimation" style="background-color:<%= %w( #AFEEEE #EEE8AA #00FFFF #ADFF2F ).sample %>">
             <div class="tape"></div>
+              <%= render 'comments/delete_button', idea: comment %>
             <p class="postit">
               <% user = User.find_by(id: comment.user_id) %>
               <span>User : <%= link_to user.name, user %> <br><%= comment.updated_at %> </span>
-              <div class="postit2" style="padding:0 auto" >
+              <div class="postit2" style="padding:10px" >
                 <%= simple_format h comment.content %>
               </div>
             </p>

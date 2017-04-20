@@ -1,0 +1,3 @@
+<% if current_user.id == idea.user_id %>
+  <%= link_to "Delete", idea, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs del' %>
+<% end %>
