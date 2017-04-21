@@ -13,6 +13,4 @@ Rails.application.routes.draw do
   
   get 'rankings/fav', to: 'rankings#fav'
   
-  get '*not_found' => 'application#routing_error'
-  post '*not_found' => 'application#routing_error'
 end

@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+    <title>IdeaBoard</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="wjSdPTwRbKHjwXeSr422ec0G9Px1S4DjFY/o4akh9YiSFfn+KqMV9DEXVP65PrPRa9MTRLkdvJfiXp5qfsGkvw==" />
 
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="/assets/application.self-2a868366227be5c2e3437918a830b3017be12b7d9fa88c2e451e290f0ab00614.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap-filestyle.self-026a969b6596f3256b38ce18e85cd849bca4ef119f34cc7f6e80e87f8f673a72.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap-filestyle.min.self-9c16f4601f2023ff86bb91c93e7d92f09f18e4ea845adc339ca29f8d2469975e.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-5454023407ffec0d29137c7110917e1e745525ae9afbc05f52104c4cd6597429.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-6e0514260c1aa76eaf252412ce74e63f68819fd19bf740595f592c5ba4c36537.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-9b9be17d3c356f1a9a23b03b3b5d01bb4e46845459cc7ac189cd20f571fefb23.js?body=1" data-turbolinks-track="reload"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
 
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
-
-<body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  <body>
+    <header>
+  <nav class="navbar navbar-inverse navbar-static-top" style="background-color: #000; color=#000">
+    <div class="container">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="/">IdeaBoard</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-left" id="idea_search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          <div class="form-group">
+            <input class="form-control" placeholder="検索キーワード" type="text" name="q[content_cont]" id="q_content_cont" />
+            <input type="submit" name="commit" value="検索" class="btn btn-default" data-disable-with="検索" />
+          </div>
+</form>			    
+			    <ul class="nav navbar-nav navbar-right">
+			    <li>
+            <a href="/rankings/fav">
+              <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+              Favランキング
+</a>          </li>
+            <li><a href="/signup">新規登録</a></li>
+            <li><a href="/login">ログイン</a></li>
+        </ul>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
+  </nav>
+</header>
+
+
+    
+
+    <div class="container">
+      <div class="col-md-offset-3 col-md-6 col-xs-12">
+        <h1>404 not_found</h1>
+          <a href="/">トップページに戻る</a>
+      </div>
+    </div>
+
+    <footer>
+  <!--<div class="date"><h1>四月二十一日</h1></div>-->
+  <img src="/blackboard-eraser.png"><br>
+  <div class="text-center text-muted">© 2017 IdeaBoard.</div>
+</footer>
+
+  </body>
 </html>
