@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
+  <style type="text/css">
+    @font-face {
+      font-family:"HuiFont29";
+      src: url(/font/HuiFont29.eot);/* ie */
+    }
+    @font-face {
+      font-family:"HuiFont29";
+      src: local("HuiFont29"),
+           local("HuiFont29"),
+           url(/font/HuiFont29.ttf) format('truetype');/* firefox, Opera, Chrome */
+    }
+
+    body {
+      font-family: "HuiFont29",Verdana,sans-serif;
+      color: #fff;
+      /*background-color: #114400;*/
+      background: url(/blackboard.jpg) repeat;
+      border: 9px solid #a60;
+      border-radius: 3px;
+      box-shadow: 2px 2px 4px #666, 2px 2px 2px #111 inset;
+      /*text-shadow: 0px 0px 2px #000;*/
+      line-height: 1.9;
+    }
+
+  </style>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>IdeaBoard</title>
-    <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="wjSdPTwRbKHjwXeSr422ec0G9Px1S4DjFY/o4akh9YiSFfn+KqMV9DEXVP65PrPRa9MTRLkdvJfiXp5qfsGkvw==" />
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" media="all" href="/assets/application.self-2a868366227be5c2e3437918a830b3017be12b7d9fa88c2e451e290f0ab00614.css?body=1" data-turbolinks-track="reload" />
-    <script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/bootstrap-filestyle.self-026a969b6596f3256b38ce18e85cd849bca4ef119f34cc7f6e80e87f8f673a72.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/bootstrap-filestyle.min.self-9c16f4601f2023ff86bb91c93e7d92f09f18e4ea845adc339ca29f8d2469975e.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/action_cable.self-5454023407ffec0d29137c7110917e1e745525ae9afbc05f52104c4cd6597429.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/cable.self-6e0514260c1aa76eaf252412ce74e63f68819fd19bf740595f592c5ba4c36537.js?body=1" data-turbolinks-track="reload"></script>
-<script src="/assets/application.self-9b9be17d3c356f1a9a23b03b3b5d01bb4e46845459cc7ac189cd20f571fefb23.js?body=1" data-turbolinks-track="reload"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
@@ -68,7 +81,6 @@
 
     <footer>
   <!--<div class="date"><h1>四月二十一日</h1></div>-->
-  <img src="/blackboard-eraser.png"><br>
   <div class="text-center text-muted">© 2017 IdeaBoard.</div>
 </footer>
 
