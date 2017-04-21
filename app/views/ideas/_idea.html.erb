@@ -6,8 +6,12 @@
     <div class="tape"></div>
     <p class="postit">
         <% user = User.find_by(id: idea.user_id) %>
-        <span>User : <%= link_to user.name, user %> <br><%= idea.updated_at.strftime("%Y/%m/%d %X") %> </span>
+        <span>
+            User : <%= link_to user.name, user %> <br><%= idea.updated_at.strftime("%Y/%m/%d %X") %> <br>
+            <%= idea.comments.count %> Comments
+        </span>
         <div class="postit2">
+            
             <% unless idea.image.blank? %>
                 <div class="thumbnail" style="background-color:<%=color%>">
                     <%= link_to image_tag(idea.image), idea %>

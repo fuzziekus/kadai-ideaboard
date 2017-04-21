@@ -25,6 +25,12 @@
               Favランキング
             <% end %>
           </li>
+          <li>
+            <%= link_to rankings_comment_path do %>
+              <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+              Comment ランキング
+            <% end %>
+          </li>
           <% if logged_in? %>
             
             <li class="dropdown">

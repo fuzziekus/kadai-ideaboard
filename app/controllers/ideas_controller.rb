@@ -34,7 +34,7 @@ class IdeasController < ApplicationController
       redirect_to root_url
     else
       @ideas = Idea.order('created_at DESC').page(params[:page])
-      flash.now[:danger] = 'メッセージの投稿に失敗しました。'
+      flash.now[:danger] = 'アイデアの投稿に失敗しました。アイデアの文字数は1～255文字で入力してください。画像のみの投稿はできません。'
       render 'toppages/index'
     end
   end

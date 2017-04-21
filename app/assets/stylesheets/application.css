@@ -1,5 +1,25 @@
 @charset "utf-8";
 
+
+/* WEBフォント指定 */
+@font-face {
+    font-family:"HuiFont29";
+    src: url(/font/HuiFont29.eot);/* ie */
+}
+@font-face {
+    font-family:"HuiFont29";
+    src: local("HuiFont29"),
+         local("HuiFont29"),
+         url(/font/HuiFont29.ttf) format('truetype');/* firefox, Opera, Chrome */
+}
+
+@font-face {
+    font-family:"EraserRegular";
+    src: local("EraserRegular"),
+         local("EraserRegular"),
+         url("/font/EraserRegular.ttf") format('truetype');/* firefox, Opera, Chrome */
+}
+
 /* body */
 body {
   font-family: "HuiFont29",Verdana,sans-serif;
@@ -44,17 +64,6 @@ footer .date {
   height: 40px;
 }
 
-/* WEBフォント指定 */
-@font-face {
-    font-family:"HuiFont29";
-    src: url(/font/HuiFont29.eot);/* ie */
-}
-@font-face {
-    font-family:"HuiFont29";
-    src: local("HuiFont29"),
-         local("HuiFont29"),
-         url(/font/HuiFont29.ttf) format('truetype');/* firefox, Opera, Chrome */
-}
 
 
 /* cover */
@@ -78,9 +87,12 @@ footer .date {
 }
 .cover .cover-inner .cover-contents h1 {
   margin: 0 0 20px 0;
+  width: 120%;
+  height: auto;
   color: #fff;
   font-weight: bold;
   letter-spacing: 0.15em;
+  font-family: "EraserRegular";
 }
 
 /* search */

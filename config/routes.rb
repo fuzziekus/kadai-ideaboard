@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :comments,  only: [:create, :destroy, :index]
   
   get 'rankings/fav', to: 'rankings#fav'
+  get 'rankings/comment', to: 'rankings#comment'
   
 end
