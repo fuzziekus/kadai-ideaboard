@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_search
+  rescue_from ActionView::MissingTemplate, with: [:render_404, :render_500]
 
   include SessionsHelper
   
