@@ -15,11 +15,16 @@
     <div class="form-group">
       <%= t.label :content, 'アイデア' %>
       <%= t.text_area :content, class: 'form-control', rows: 5  %>
-      <%= t.label "画像", class: 'control-label', style: "color:#fff"  %>
-      <%= t.file_field :image,  class: 'filestyle', "data-buttonText": "ファイル選択" %>
+      <div class="input-group">
+        <input type="text" class="form-control" readonly="" value="<%= idea.image %>" >
+        <label class="input-group-btn">
+          <span class="btn btn-default">
+            <span class="glyphicon glyphicon-picture"></span> ファイル選択 <%= t.file_field :image, style: "display:none;" %>
+          </span>
+        </label>
+      </div>
     </div>
-
-    <%= t.submit '投稿', class: 'btn btn-primary' %>
+    <%= t.submit '投稿', class: 'btn btn-primary btn-block' %>
   <% end %>
   </div>
 </div>
