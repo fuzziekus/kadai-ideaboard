@@ -1,6 +1,15 @@
 class CommentsController < ApplicationController
   before_action :require_user_logged_in
 
+  def index
+    comments = Comment.order('created_at DESC').where(user_id: current_user)
+    @ideas = []
+    comments.each{|comment|
+      @ideas.push Idea.order('created_at DESC').find_by(id: comment.idea_id)
+    }
+    p @ideas.first
+  end
+
   def create
     @comment = Comment.new(comment_params)
     if @comment.save

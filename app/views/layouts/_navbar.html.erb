@@ -39,7 +39,8 @@
                 <li>
                   <%= link_to 'マイページ', user_path(current_user) %>
                 </li>
-                <li><%= link_to 'Favorite Posts', favorites_path %></li>
+                <li><%= link_to 'Favorite Ideas', favorites_path %></li>
+                <li><%= link_to 'Commented Ideas', comments_path %></li>
                 <li role="separator" class="divider"></li>
                 <li>
                   <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>

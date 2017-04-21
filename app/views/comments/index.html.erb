@@ -1,0 +1,12 @@
+<h1>コメントしたアイデア</h1>
+<% if @ideas %>
+  <div class="row">
+    <% @ideas.each do |idea| %>
+      <div class="item">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <%= render 'ideas/idea', idea: idea, color: %w( #AFEEEE #EEE8AA #00FFFF #ADFF2F ).sample %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

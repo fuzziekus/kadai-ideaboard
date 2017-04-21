@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   before_action :require_user_logged_in
-  before_action :correct_user, only: [:update, :destroy, :edit]
+  before_action :correct_user, only: [:update, :destroy, :edit, :commented]
   
   def show
     @flag = false
