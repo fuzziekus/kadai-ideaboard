@@ -2,14 +2,14 @@
   <%= form_for(current_user.favorites.find_by(idea_id: idea.id), html: { method: :delete }) do |f| %>
     <%= hidden_field_tag :idea_id, idea.id %>
     <%= button_tag( class: "btn btn-danger btn-xs fav") do %>
-      <%= content_tag :span, "", class: "glyphicon glyphicon-thumbs-up" %>
+      <%= content_tag :span, "", class: "glyphicon glyphicon-star" %>
     <% end %>
   <% end %>
   <% else %>
     <%= form_for(current_user.favorites.build, html:{ style: "position=relative" }) do |f| %>
       <%= hidden_field_tag :idea_id, idea.id %>
       <%= button_tag( class: "btn btn-primary btn-xs fav") do %>
-        <%= content_tag :span, "", class: "glyphicon glyphicon-thumbs-up" %>
+        <%= content_tag :span, "", class: "glyphicon glyphicon-star" %>
       <% end %>
   <% end %>
 <% end %>
