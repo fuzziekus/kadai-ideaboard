@@ -1,0 +1,21 @@
+<h1>Userランキング</h1>
+<% if @users.present? %>
+  <div class="row">
+    <% @users.each_with_index do |user, index| %>
+      <div class="item">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="user-profile">
+            <div class="icon text-center">
+              <img src="<%= gravatar_url( user, size: 100 ) %>" alt="" class="img-circle">
+            </div>
+            <div class="name text-center">
+              <h1> <%= link_to user.name, user %> </h1>
+              <h3><%= index+1 %>位: <%= @ranking_counts[user.id] %> Favs</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<% end %>

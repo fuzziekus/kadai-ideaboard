@@ -22,4 +22,12 @@ class User < ApplicationRecord
   def beingfavorite?(other_idea)
     self.favs.include?(other_idea)
   end
+  
+  def self.ranking
+    hash = Hash.new(0)
+    Favorite.group(:idea_id).order('count_idea_id DESC').count(:idea_id).each{|idea_id, favs|
+      hash[Idea.find(idea_id).user_id] += favs
+    }
+    hash
+  end
 end

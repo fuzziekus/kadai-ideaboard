@@ -8,4 +8,10 @@ class RankingsController < ApplicationController
     @ranking_counts = Comment.ranking
     @ideas = Idea.find(@ranking_counts.keys)
   end
+  
+  def user
+    @ranking_counts = User.ranking
+    @users = User.find(@ranking_counts.keys)
+    @favs  = @ranking_counts.values
+  end
 end

@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   
   get 'rankings/fav', to: 'rankings#fav'
   get 'rankings/comment', to: 'rankings#comment'
+  get 'rankings/user', to: 'rankings#user'
   
 end
