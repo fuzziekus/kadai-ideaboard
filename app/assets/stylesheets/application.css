@@ -85,14 +85,14 @@ footer .date {
   text-align: center;
   position: relative;
 }
+
 .cover .cover-inner .cover-contents h1 {
   margin: 0 0 20px 0;
-  width: 120%;
-  height: auto;
   color: #fff;
   font-weight: bold;
   letter-spacing: 0.15em;
-  font-family: "EraserRegular";
+  font-size: xx-large;
+  
 }
 
 /* search */
