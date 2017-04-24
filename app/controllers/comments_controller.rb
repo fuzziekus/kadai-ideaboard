@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     comments.each{|comment|
       @ideas.push Idea.order('created_at DESC').find_by(id: comment.idea_id)
     }
-    p @ideas.first
+    @ideas.uniq!
   end
 
   def create
