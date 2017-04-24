@@ -28,6 +28,6 @@ class User < ApplicationRecord
     Favorite.group(:idea_id).order('count_idea_id DESC').count(:idea_id).each{|idea_id, favs|
       hash[Idea.find(idea_id).user_id] += favs
     }
-    hash
+    hash.sort {|(k1, v1), (k2, v2)| v2 <=> v1 }
   end
 end
